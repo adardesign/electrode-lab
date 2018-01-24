@@ -1,0 +1,53 @@
+{
+  "name": "electrode-lab",
+  "version": "0.0.1",
+  "description": "A ecommerce catalog",
+  "homepage": "/",
+  "author": {
+    "name": "Eliazer Braun",
+    "email": "adardesign@gmail.com",
+    "url": "http://www.adardesign.com"
+  },
+  "contributors": [],
+  "files": [
+    "server",
+    "src",
+    "lib",
+    "dist"
+  ],
+  "main": "lib/server/index.js",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "adardesign/electrode-lab"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">= 4 <= 8",
+    "npm": ">= 3 <= 5"
+  },
+  "scripts": {
+    "build": "clap build",
+    "prod-start": "NODE_ENV=production clap -n -x electrode/build prod",
+    "start": "if test \"$NODE_ENV\" = \"production\"; then npm run prod-start; else clap dev; fi",
+    "test": "clap check",
+    "coverage": "clap check",
+    "prod": "echo 'Starting standalone server in PROD mode'; NODE_ENV=production node ./lib/server/",
+    "heroku-postbuild": "clap build"
+  },
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "electrode-archetype-react-app": "^5.0.0",
+    "electrode-auto-ssr": "^1.0.0",
+    "electrode-confippet": "^1.0.0",
+    "electrode-react-webapp": "^2.1.0",
+    "electrode-redux-router-engine": "^1.5.0",
+    "express": "^4.0.0",
+    "lodash": "^4.10.1",
+    "react-notify-toast": "^0.4.0",
+    "xclap": "^0.2.19"
+  },
+  "devDependencies": {
+    "electrode-archetype-react-app-dev": "^5.0.0"
+  }
+}
