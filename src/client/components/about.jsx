@@ -34,27 +34,6 @@ export default () =>
     {/**/}
     <Notifications />
     {/**/}
-
-
-    <Link to="/about">Link to about page</Link>
-
-
-    <section className={custom.header}>
-      <h2 className={skeleton.title}>
-        Hello from {" "}
-        <a href="https://github.com/electrode-io">{"Electrode"} <img src={electrodePng} /></a>
-      </h2>
-    </section>
-
-    <div className={custom["docs-section"]}>
-      <DemoStates />
-    </div>
-
-    <div className={custom["docs-section"]}>
-      <DemoPureStates />
-    </div>
-
-    <div className={custom["docs-section"]}>
-      <DemoButtons />
-    </div>
+    THIS IS THE ABOUT PAGE
+    <Link to="/">Go to home page</Link>
   </div>;
